@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
+  "name": "markdowntohtml-component",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Stencil Markdown to HTML Component",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
@@ -15,18 +15,20 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
-  "dependencies": {},
+  "dependencies": {
+    "marked": "^0.5.1"
+  },
   "devDependencies": {
     "@stencil/core": "~0.13.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/pdestrais/markdowntohtml-component-stencil.git"
   },
   "author": "Ionic Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://github.com/pdestrais/markdowntohtml-component-stencil"
   },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "https://github.com/pdestrais/markdowntohtml-component-stencil"
 }

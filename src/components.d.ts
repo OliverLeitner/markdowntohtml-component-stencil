@@ -12,40 +12,36 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
-    'first': string;
-    'last': string;
-    'middle': string;
+  interface MarkdowntohtmlComponent {
+    'content': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    'first'?: string;
-    'last'?: string;
-    'middle'?: string;
+  interface MarkdowntohtmlComponentAttributes extends StencilHTMLAttributes {
+    'content'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'MarkdowntohtmlComponent': Components.MarkdowntohtmlComponent;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'markdowntohtml-component': Components.MarkdowntohtmlComponentAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLMarkdowntohtmlComponentElement extends Components.MarkdowntohtmlComponent, HTMLStencilElement {}
+  var HTMLMarkdowntohtmlComponentElement: {
+    prototype: HTMLMarkdowntohtmlComponentElement;
+    new (): HTMLMarkdowntohtmlComponentElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'markdowntohtml-component': HTMLMarkdowntohtmlComponentElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'markdowntohtml-component': HTMLMarkdowntohtmlComponentElement;
   }
 
 
