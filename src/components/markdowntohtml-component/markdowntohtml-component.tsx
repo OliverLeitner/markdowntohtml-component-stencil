@@ -6,8 +6,8 @@ const marked = marked_;
 
 @Component({
   tag: 'markdowntohtml-component',
-  styleUrl: 'markdowntohtml-component.css',
-  shadow: true
+  // styleUrl: 'markdowntohtml-component.css',
+  shadow: false
 })
 export class MarkdowntohtmlComponent {
   @Prop() content: string;
