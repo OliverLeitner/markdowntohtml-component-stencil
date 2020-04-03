@@ -1,25 +1,28 @@
 import { Component, Prop } from '@stencil/core';
 import * as marked_ from 'marked';
+import hljs from 'highlight.js';
 
-// workaround as standard import method give an error "Cannot call a namespace ('marked')""
 const marked = marked_;
 
 @Component({
   tag: 'markdowntohtml-component',
-  // styleUrl: 'markdowntohtml-component.css',
   shadow: false
 })
 export class MarkdowntohtmlComponent {
   @Prop() content: string;
 
   convertToHTML(): string {
-    console.log("convertingmdtohtml")
     return (
       marked.default(this.content)
     );
   }
 
   render() {
+    marked.default.setOptions({
+      highlight: function(code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
     return <div innerHTML={this.convertToHTML()}/>;
   }
 }
